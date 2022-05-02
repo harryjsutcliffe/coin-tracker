@@ -7,22 +7,24 @@ import CoinList from "./CoinList";
 import CoinChart from "./CoinChart";
 
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <BrowserRouter>
-        <NavBar/>
+    <HashRouter>
+        <NavBar />
         <Routes>
             {/* <Route path="/" element={<CoinChart />} /> */}
             <Route path="/" element={<CoinList />} />
 
-            <Route path="details" element={<CoinDetails />}>
+            <Route path="/details" element={<CoinDetails />}>
                 <Route path=":id" element={<CoinDetails />} />
             </Route>
+
+            <Route path="*" element={<CoinList />} />
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -29,8 +29,6 @@ function CoinChart({ id, days, setDays }) {
         url
     );
 
-    console.log(chartData);
-
     if (chartData == null) {
         return <div>Loading...</div>;
     }
@@ -89,7 +87,6 @@ function CoinChart({ id, days, setDays }) {
             </AreaChart>
             <div className="d-flex justify-content-around mx-auto w-75">
                 {daysList.map((item, index) => {
-                    console.log(item);
                     return (
                         <button
                             className={getClassNameButton(item)}

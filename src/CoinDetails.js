@@ -18,8 +18,6 @@ function CoinDetails() {
         // "../response_1649920740842.json"
     );
 
-    console.log(coinData);
-
     return (
         <div className="content w-75 mx-auto mt-2 ">
             {isLoading && <div>Loading...</div>}
